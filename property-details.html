@@ -1,0 +1,480 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View complete property details, photos, pricing, amenities and contact information on EstatePro.">
+    <title>Property Details | EstatePro</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container header-container">
+
+            <a href="index.html" class="logo">
+                <span class="logo-icon">E</span>
+                <span>Estate<span class="logo-highlight">Pro</span></span>
+            </a>
+
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="main-navigation" id="mainNavigation">
+                <a href="index.html">Home</a>
+                <a href="properties.html" class="active">Properties</a>
+                <a href="buy.html">Buy</a>
+                <a href="rent.html">Rent</a>
+                <a href="commercial.html">Commercial</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="login.html" class="btn btn-outline header-login">Login</a>
+                <a href="post-property.html" class="btn btn-primary">Post Property</a>
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- Breadcrumb -->
+    <section class="property-details-breadcrumb">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <a href="properties.html">Properties</a>
+                <span>/</span>
+                <span>Property Details</span>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Property Details Main -->
+    <main class="property-details-section">
+        <div class="container">
+
+            <!-- Loading -->
+            <div id="propertyDetailsLoading" class="properties-loading">
+                <div class="loader"></div>
+                <p>Loading property details...</p>
+            </div>
+
+
+            <!-- Property Content -->
+            <div id="propertyDetailsContent" hidden>
+
+                <!-- Title and Actions -->
+                <div class="property-details-heading">
+
+                    <div class="property-details-title">
+                        <span class="section-eyebrow" id="propertyListingBadge">
+                            PROPERTY DETAILS
+                        </span>
+
+                        <h1 id="propertyTitle">Property Title</h1>
+
+                        <p class="property-details-location">
+                            <span>⌖</span>
+                            <span id="propertyLocation">Property Location</span>
+                        </p>
+                    </div>
+
+
+                    <div class="property-details-actions">
+
+                        <button
+                            type="button"
+                            class="btn btn-outline"
+                            id="sharePropertyBtn"
+                        >
+                            ↗ Share
+                        </button>
+
+                        <button
+                            type="button"
+                            class="btn btn-outline"
+                            id="favoritePropertyBtn"
+                        >
+                            ♡ Save
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Image Gallery -->
+                <section class="property-gallery" id="propertyGallery">
+
+                    <div class="property-gallery-main">
+                        <img
+                            id="mainPropertyImage"
+                            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85"
+                            alt="Property main image"
+                        >
+                    </div>
+
+                    <div class="property-gallery-side">
+
+                        <div class="property-gallery-small">
+                            <img
+                                id="propertyImageTwo"
+                                src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=700&q=85"
+                                alt="Property interior"
+                            >
+                        </div>
+
+                        <div class="property-gallery-small">
+                            <img
+                                id="propertyImageThree"
+                                src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=700&q=85"
+                                alt="Property room"
+                            >
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- Details Layout -->
+                <div class="property-details-layout">
+
+                    <!-- Left Content -->
+                    <div class="property-details-main-content">
+
+                        <!-- Overview -->
+                        <section class="property-info-card">
+
+                            <div class="property-price-row">
+                                <div>
+                                    <span class="detail-label">Property Price</span>
+                                    <h2 id="propertyPrice">₹ 0</h2>
+                                </div>
+
+                                <span class="property-status-badge" id="propertyStatus">
+                                    Available
+                                </span>
+                            </div>
+
+
+                            <div class="property-quick-info">
+
+                                <div class="quick-info-item">
+                                    <span class="quick-info-icon">▣</span>
+                                    <div>
+                                        <strong id="propertyBedrooms">--</strong>
+                                        <small>Bedrooms</small>
+                                    </div>
+                                </div>
+
+                                <div class="quick-info-item">
+                                    <span class="quick-info-icon">♨</span>
+                                    <div>
+                                        <strong id="propertyBathrooms">--</strong>
+                                        <small>Bathrooms</small>
+                                    </div>
+                                </div>
+
+                                <div class="quick-info-item">
+                                    <span class="quick-info-icon">⌂</span>
+                                    <div>
+                                        <strong id="propertyArea">--</strong>
+                                        <small>Area</small>
+                                    </div>
+                                </div>
+
+                                <div class="quick-info-item">
+                                    <span class="quick-info-icon">▤</span>
+                                    <div>
+                                        <strong id="propertyType">--</strong>
+                                        <small>Property Type</small>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </section>
+
+
+                        <!-- Description -->
+                        <section class="property-info-card">
+                            <div class="property-section-heading">
+                                <h2>About This Property</h2>
+                            </div>
+
+                            <p id="propertyDescription" class="property-description">
+                                Property description will appear here.
+                            </p>
+                        </section>
+
+
+                        <!-- Features -->
+                        <section class="property-info-card">
+                            <div class="property-section-heading">
+                                <h2>Property Features</h2>
+                            </div>
+
+                            <div class="property-features-grid" id="propertyFeatures">
+                                <div class="property-feature-item">
+                                    <span>✓</span> Features will appear here
+                                </div>
+                            </div>
+                        </section>
+
+
+                        <!-- Amenities -->
+                        <section class="property-info-card">
+                            <div class="property-section-heading">
+                                <h2>Amenities</h2>
+                            </div>
+
+                            <div class="property-amenities-grid" id="propertyAmenities">
+                                <p>Amenities information will appear here.</p>
+                            </div>
+                        </section>
+
+
+                        <!-- Additional Information -->
+                        <section class="property-info-card">
+                            <div class="property-section-heading">
+                                <h2>Property Information</h2>
+                            </div>
+
+                            <div class="property-information-grid">
+
+                                <div class="property-information-item">
+                                    <span>Property ID</span>
+                                    <strong id="propertyId">--</strong>
+                                </div>
+
+                                <div class="property-information-item">
+                                    <span>Listing Type</span>
+                                    <strong id="propertyListingType">--</strong>
+                                </div>
+
+                                <div class="property-information-item">
+                                    <span>Property Type</span>
+                                    <strong id="propertyInformationType">--</strong>
+                                </div>
+
+                                <div class="property-information-item">
+                                    <span>Location</span>
+                                    <strong id="propertyInformationLocation">--</strong>
+                                </div>
+
+                            </div>
+                        </section>
+
+                    </div>
+
+
+                    <!-- Right Sidebar -->
+                    <aside class="property-details-sidebar">
+
+                        <!-- Contact Owner -->
+                        <div class="property-contact-card">
+
+                            <span class="section-eyebrow">INTERESTED IN THIS PROPERTY?</span>
+
+                            <h3>Contact Property Owner</h3>
+
+                            <p>
+                                Send an inquiry to get more information
+                                or arrange a property visit.
+                            </p>
+
+                            <form id="propertyInquiryForm">
+
+                                <div class="form-group">
+                                    <label for="inquiryName">Your Name</label>
+                                    <input
+                                        type="text"
+                                        id="inquiryName"
+                                        name="name"
+                                        placeholder="Enter your name"
+                                        required
+                                    >
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="inquiryEmail">Email Address</label>
+                                    <input
+                                        type="email"
+                                        id="inquiryEmail"
+                                        name="email"
+                                        placeholder="Enter your email"
+                                        required
+                                    >
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="inquiryPhone">Phone Number</label>
+                                    <input
+                                        type="tel"
+                                        id="inquiryPhone"
+                                        name="phone"
+                                        placeholder="Enter your phone number"
+                                        required
+                                    >
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="inquiryMessage">Message</label>
+                                    <textarea
+                                        id="inquiryMessage"
+                                        name="message"
+                                        rows="4"
+                                        placeholder="I'm interested in this property. Please contact me."
+                                    ></textarea>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary inquiry-submit-btn">
+                                    Send Inquiry <span>→</span>
+                                </button>
+
+                                <p class="form-message" id="inquiryFormMessage" aria-live="polite"></p>
+
+                            </form>
+
+                        </div>
+
+
+                        <!-- Safety Information -->
+                        <div class="property-safety-card">
+                            <div class="safety-icon">✓</div>
+                            <h3>Stay Safe</h3>
+                            <p>
+                                Always verify property details and ownership
+                                documents before making a payment or signing an agreement.
+                            </p>
+                        </div>
+
+                    </aside>
+
+                </div>
+
+            </div>
+
+
+            <!-- Property Not Found -->
+            <div class="empty-state" id="propertyNotFound" hidden>
+                <div class="empty-state-icon">⌂</div>
+                <h2>Property Not Found</h2>
+                <p>
+                    This property may have been removed or the link may be incorrect.
+                </p>
+
+                <a href="properties.html" class="btn btn-primary">
+                    Browse Properties
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+
+    <!-- Similar Properties -->
+    <section class="buy-properties-section similar-properties-section">
+        <div class="container">
+
+            <div class="section-heading">
+                <div>
+                    <span class="section-eyebrow">YOU MAY ALSO LIKE</span>
+                    <h2>Similar Properties</h2>
+                    <p>Discover more properties you might be interested in.</p>
+                </div>
+            </div>
+
+            <div class="buy-properties-grid" id="similarPropertiesGrid">
+                <!-- Similar properties generated by JavaScript -->
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+
+            <div class="footer-main">
+
+                <div class="footer-brand">
+                    <a href="index.html" class="logo footer-logo">
+                        <span class="logo-icon">E</span>
+                        <span>Estate<span class="logo-highlight">Pro</span></span>
+                    </a>
+
+                    <p>
+                        Your trusted partner in finding the perfect property.
+                        Discover better places and better possibilities with EstatePro.
+                    </p>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Explore</h4>
+                    <a href="properties.html">All Properties</a>
+                    <a href="buy.html">Properties for Sale</a>
+                    <a href="rent.html">Properties for Rent</a>
+                    <a href="commercial.html">Commercial Spaces</a>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact Us</a>
+                    <a href="login.html">Login</a>
+                    <a href="register.html">Create Account</a>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Get Started</h4>
+                    <a href="post-property.html">Post a Property</a>
+                    <a href="dashboard.html">My Dashboard</a>
+                    <a href="favorites.html">My Favorites</a>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>© <span class="current-year"></span> EstatePro. All rights reserved.</p>
+
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="js/data.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/favorites.js"></script>
+    <script src="js/properties.js"></script>
+    <script src="js/catalog.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>

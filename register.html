@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#142D4E">
+  <title>Create account | EstatePro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-container">
+      <a class="brand" href="index.html"><span class="brand-mark">E</span><span>Estate<span class="brand-accent">Pro</span></span></a>
+      <button class="mobile-menu-btn" id="mobileMenuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <nav class="main-navigation" id="mainNavigation">
+        <a class="nav-link" href="index.html">Home</a><a class="nav-link" href="properties.html">Explore</a>
+        <a class="nav-link" href="buy.html">Buy</a><a class="nav-link" href="rent.html">Rent</a>
+        <a class="nav-link" href="commercial.html">Commercial</a><a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+        <a class="btn btn-primary nav-cta" href="post-property.html">List Property</a>
+        <a class="nav-link" href="login.html" id="navAccountLink">Sign in</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+<section class="auth-section"><div class="auth-card">
+  <p class="eyebrow">WELCOME TO ESTATEPRO</p><h1>Create your account</h1><p>Save properties and manage your enquiries in one place.</p>
+  <form id="registerForm">
+    <label class="form-group">Full name<input name="name" required minlength="2" autocomplete="name"></label>
+    <label class="form-group">Email address<input name="email" type="email" required autocomplete="email"></label>
+    <label class="form-group">Phone number<input name="phone" type="tel" required inputmode="numeric" placeholder="10-digit mobile number"></label>
+    <label class="form-group">Password<input name="password" type="password" required minlength="8" autocomplete="new-password"></label>
+    <label class="form-group">Confirm password<input name="confirmPassword" type="password" required minlength="8" autocomplete="new-password"></label>
+    <button class="btn btn-primary btn-block" type="submit">Create account</button><p id="registerFeedback" class="form-feedback" role="status"></p>
+  </form><p class="auth-switch">Already have an account? <a href="login.html">Sign in</a></p>
+</div></section>
+</main>
+  <footer class="site-footer"><div class="container footer-grid">
+    <div><a class="brand footer-brand" href="index.html"><span class="brand-mark">E</span><span>Estate<span class="brand-accent">Pro</span></span></a>
+    <p>Find a place you'll love to call home.</p></div>
+    <div><h3>Explore</h3><a href="buy.html">Buy property</a><a href="rent.html">Rent property</a><a href="commercial.html">Commercial</a></div>
+    <div><h3>Company</h3><a href="about.html">About us</a><a href="contact.html">Contact</a></div>
+    <div><h3>Account</h3><a href="login.html">Sign in</a><a href="register.html">Create account</a></div>
+  </div><div class="container footer-bottom">© <span data-year></span> EstatePro. Frontend demonstration.</div></footer>
+  <div id="toastContainer" class="toast-container" aria-live="polite"></div>
+  <script src="js/data.js"></script><script src="js/storage.js"></script><script src="js/utils.js"></script>
+  <script src="js/auth.js"></script><script src="js/main.js"></script>
+</body></html>

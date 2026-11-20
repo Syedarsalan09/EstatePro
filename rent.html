@@ -1,0 +1,415 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Find apartments, houses and villas for rent with EstatePro. Explore rental properties across India.">
+    <title>Properties for Rent | EstatePro</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container header-container">
+
+            <a href="index.html" class="logo">
+                <span class="logo-icon">E</span>
+                <span>Estate<span class="logo-highlight">Pro</span></span>
+            </a>
+
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="main-navigation" id="mainNavigation">
+                <a href="index.html">Home</a>
+                <a href="properties.html">Properties</a>
+                <a href="buy.html">Buy</a>
+                <a href="rent.html" class="active">Rent</a>
+                <a href="commercial.html">Commercial</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="login.html" class="btn btn-outline header-login">Login</a>
+                <a href="post-property.html" class="btn btn-primary">Post Property</a>
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="page-hero rent-hero">
+        <div class="container">
+
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <a href="properties.html">Properties</a>
+                <span>/</span>
+                <span>Rent</span>
+            </div>
+
+            <div class="page-hero-content">
+                <span class="section-eyebrow">FIND A PLACE THAT FEELS LIKE HOME</span>
+
+                <h1>Your Next Home Is Just a <span>Search Away.</span></h1>
+
+                <p>
+                    Discover comfortable apartments, beautiful houses and
+                    spacious villas available for rent.
+                </p>
+
+                <a href="#rentalProperties" class="btn btn-primary">
+                    Explore Rental Homes <span>→</span>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Rental Benefits -->
+    <section class="buy-benefits-section">
+        <div class="container">
+
+            <div class="buy-benefits-grid">
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">⌂</div>
+                    <h3>Multiple Choices</h3>
+                    <p>Explore apartments, independent houses and villas.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">₹</div>
+                    <h3>Flexible Budgets</h3>
+                    <p>Find rental homes that match your monthly budget.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">⌖</div>
+                    <h3>Great Locations</h3>
+                    <p>Discover homes in locations that suit your lifestyle.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">♡</div>
+                    <h3>Save Favorites</h3>
+                    <p>Shortlist your preferred rental properties for later.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Rental Search -->
+    <section class="buy-search-section">
+        <div class="container">
+
+            <div class="buy-search-heading">
+                <span class="section-eyebrow">SEARCH RENTAL PROPERTIES</span>
+                <h2>Find Your Ideal Rental Home</h2>
+                <p>Choose your preferred location, property type and monthly budget.</p>
+            </div>
+
+            <form id="rentSearchForm" class="buy-search-form">
+
+                <div class="search-field">
+                    <label for="rentLocation">Location</label>
+                    <input
+                        type="text"
+                        id="rentLocation"
+                        name="location"
+                        placeholder="Enter city or locality"
+                    >
+                </div>
+
+                <div class="search-field">
+                    <label for="rentPropertyType">Property Type</label>
+                    <select id="rentPropertyType" name="propertyType">
+                        <option value="">All Property Types</option>
+                        <option value="apartment">Apartment</option>
+                        <option value="house">Independent House</option>
+                        <option value="villa">Villa</option>
+                    </select>
+                </div>
+
+                <div class="search-field">
+                    <label for="rentBudget">Monthly Budget</label>
+                    <select id="rentBudget" name="budget">
+                        <option value="">Any Budget</option>
+                        <option value="10000">Up to ₹10,000</option>
+                        <option value="15000">Up to ₹15,000</option>
+                        <option value="25000">Up to ₹25,000</option>
+                        <option value="35000">Up to ₹35,000</option>
+                        <option value="50000">Up to ₹50,000</option>
+                        <option value="100000">Up to ₹1 Lakh</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                    Search Rentals <span>→</span>
+                </button>
+
+            </form>
+
+        </div>
+    </section>
+
+
+    <!-- Rental Categories -->
+    <section class="buy-categories-section">
+        <div class="container">
+
+            <div class="section-heading">
+                <div>
+                    <span class="section-eyebrow">EXPLORE RENTAL OPTIONS</span>
+                    <h2>Choose Your Kind of Home</h2>
+                    <p>Find a comfortable space for every lifestyle and family size.</p>
+                </div>
+            </div>
+
+            <div class="buy-categories-grid">
+
+                <a href="properties.html?type=apartment&listing=rent" class="buy-category-card">
+                    <div class="buy-category-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=700&q=85"
+                            alt="Modern apartment for rent"
+                            loading="lazy"
+                        >
+                    </div>
+                    <div class="buy-category-info">
+                        <h3>Apartments</h3>
+                        <span>Explore Apartments →</span>
+                    </div>
+                </a>
+
+                <a href="properties.html?type=house&listing=rent" class="buy-category-card">
+                    <div class="buy-category-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=700&q=85"
+                            alt="Independent house for rent"
+                            loading="lazy"
+                        >
+                    </div>
+                    <div class="buy-category-info">
+                        <h3>Independent Houses</h3>
+                        <span>Explore Houses →</span>
+                    </div>
+                </a>
+
+                <a href="properties.html?type=villa&listing=rent" class="buy-category-card">
+                    <div class="buy-category-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&w=700&q=85"
+                            alt="Luxury villa for rent"
+                            loading="lazy"
+                        >
+                    </div>
+                    <div class="buy-category-info">
+                        <h3>Luxury Villas</h3>
+                        <span>Explore Villas →</span>
+                    </div>
+                </a>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Rental Properties -->
+    <section class="buy-properties-section" id="rentalProperties">
+        <div class="container">
+
+            <div class="section-heading properties-heading-row">
+                <div>
+                    <span class="section-eyebrow">AVAILABLE FOR RENT</span>
+                    <h2>Homes You Can Rent</h2>
+                    <p>Explore rental properties and find your next comfortable home.</p>
+                </div>
+
+                <a href="properties.html?listing=rent" class="text-link">
+                    View All Rentals <span>→</span>
+                </a>
+            </div>
+
+
+            <div class="buy-properties-grid" id="rentPropertiesGrid">
+
+                <div class="properties-loading">
+                    <div class="loader"></div>
+                    <p>Loading rental properties...</p>
+                </div>
+
+            </div>
+
+
+            <div class="empty-state" id="rentEmptyState" hidden>
+                <div class="empty-state-icon">⌂</div>
+                <h3>No Rental Properties Available</h3>
+                <p>There are currently no rental properties matching your search.</p>
+                <a href="properties.html" class="btn btn-primary">
+                    Browse All Properties
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Renting Process -->
+    <section class="buy-process-section">
+        <div class="container">
+
+            <div class="buy-process-heading">
+                <span class="section-eyebrow">SIMPLE AND CONVENIENT</span>
+                <h2>How to Find Your Rental Home</h2>
+                <p>Follow a few simple steps to discover your next place to live.</p>
+            </div>
+
+
+            <div class="buy-process-grid">
+
+                <div class="buy-process-card">
+                    <span class="process-number">01</span>
+                    <div class="process-icon">⌕</div>
+                    <h3>Search Homes</h3>
+                    <p>Explore available rental properties in your preferred location.</p>
+                </div>
+
+                <div class="buy-process-card">
+                    <span class="process-number">02</span>
+                    <div class="process-icon">♡</div>
+                    <h3>Save Your Choices</h3>
+                    <p>Shortlist properties that fit your budget and requirements.</p>
+                </div>
+
+                <div class="buy-process-card">
+                    <span class="process-number">03</span>
+                    <div class="process-icon">☎</div>
+                    <h3>Contact the Owner</h3>
+                    <p>Discuss rent, availability and property details with the owner.</p>
+                </div>
+
+                <div class="buy-process-card">
+                    <span class="process-number">04</span>
+                    <div class="process-icon">⌂</div>
+                    <h3>Move Into Your Home</h3>
+                    <p>Choose your preferred home and prepare for your next chapter.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- CTA -->
+    <section class="properties-cta-section">
+        <div class="container">
+
+            <div class="properties-cta-content">
+                <div>
+                    <span class="section-eyebrow">PROPERTY OWNERS</span>
+                    <h2>Have a Property to Rent?</h2>
+                    <p>
+                        List your rental property on EstatePro and connect
+                        with people looking for their next home.
+                    </p>
+                </div>
+
+                <a href="post-property.html" class="btn btn-light">
+                    List Your Property <span>→</span>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+
+            <div class="footer-main">
+
+                <div class="footer-brand">
+                    <a href="index.html" class="logo footer-logo">
+                        <span class="logo-icon">E</span>
+                        <span>Estate<span class="logo-highlight">Pro</span></span>
+                    </a>
+
+                    <p>
+                        Your trusted partner in finding the perfect property.
+                        Discover better places and better possibilities with EstatePro.
+                    </p>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Explore</h4>
+                    <a href="properties.html">All Properties</a>
+                    <a href="buy.html">Properties for Sale</a>
+                    <a href="rent.html">Properties for Rent</a>
+                    <a href="commercial.html">Commercial Spaces</a>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact Us</a>
+                    <a href="login.html">Login</a>
+                    <a href="register.html">Create Account</a>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Get Started</h4>
+                    <a href="post-property.html">Post a Property</a>
+                    <a href="dashboard.html">My Dashboard</a>
+                    <a href="favorites.html">My Favorites</a>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>© <span class="current-year"></span> EstatePro. All rights reserved.</p>
+
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="js/data.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/properties.js"></script>
+    <script src="js/filters.js"></script>
+    <script src="js/catalog.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>

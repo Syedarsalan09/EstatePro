@@ -1,0 +1,458 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore premium properties for sale and rent with EstatePro. Find your perfect home, apartment, villa or commercial space.">
+    <title>Explore Properties | EstatePro</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container header-container">
+
+            <a href="index.html" class="logo">
+                <span class="logo-icon">E</span>
+                <span>Estate<span class="logo-highlight">Pro</span></span>
+            </a>
+
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="main-navigation" id="mainNavigation">
+                <a href="index.html">Home</a>
+                <a href="properties.html" class="active">Properties</a>
+                <a href="buy.html">Buy</a>
+                <a href="rent.html">Rent</a>
+                <a href="commercial.html">Commercial</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="login.html" class="btn btn-outline header-login">Login</a>
+                <a href="post-property.html" class="btn btn-primary">Post Property</a>
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- Page Hero -->
+    <section class="page-hero properties-hero">
+        <div class="container">
+
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <span>Properties</span>
+            </div>
+
+            <div class="page-hero-content">
+                <span class="section-eyebrow">DISCOVER YOUR NEXT ADDRESS</span>
+                <h1>Explore Properties</h1>
+                <p>
+                    Find a place that feels like home. Explore carefully selected
+                    properties for buying, renting and investing.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Property Search -->
+    <section class="property-search-section">
+        <div class="container">
+
+            <form class="property-search-form" id="propertySearchForm">
+
+                <div class="search-field">
+                    <label for="searchLocation">Location</label>
+                    <div class="search-input-wrapper">
+                        <span class="field-icon">⌖</span>
+                        <input
+                            type="text"
+                            id="searchLocation"
+                            name="location"
+                            placeholder="City, locality or area"
+                        >
+                    </div>
+                </div>
+
+                <div class="search-field">
+                    <label for="searchListingType">Looking For</label>
+                    <select id="searchListingType" name="listingType">
+                        <option value="">All Properties</option>
+                        <option value="sale">Buy</option>
+                        <option value="rent">Rent</option>
+                        <option value="commercial">Commercial</option>
+                    </select>
+                </div>
+
+                <div class="search-field">
+                    <label for="searchPropertyType">Property Type</label>
+                    <select id="searchPropertyType" name="propertyType">
+                        <option value="">All Types</option>
+                        <option value="apartment">Apartment</option>
+                        <option value="house">Independent House</option>
+                        <option value="villa">Villa</option>
+                        <option value="plot">Plot / Land</option>
+                        <option value="office">Office Space</option>
+                        <option value="shop">Shop / Showroom</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-primary search-submit-btn">
+                    <span>Search Properties</span>
+                    <span>→</span>
+                </button>
+
+            </form>
+
+        </div>
+    </section>
+
+
+    <!-- Main Properties Section -->
+    <main class="properties-main-section">
+        <div class="container">
+
+            <div class="properties-heading-row">
+                <div>
+                    <span class="section-eyebrow">FIND YOUR PERFECT SPACE</span>
+                    <h2>Available Properties</h2>
+                    <p class="properties-description">
+                        Browse our collection of properties and find the right match.
+                    </p>
+                </div>
+
+                <div class="properties-sort">
+                    <label for="sortProperties">Sort by:</label>
+                    <select id="sortProperties">
+                        <option value="newest">Newest First</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                    </select>
+                </div>
+            </div>
+
+
+            <div class="properties-layout">
+
+                <!-- Sidebar Filters -->
+                <aside class="properties-sidebar">
+
+                    <div class="filter-header">
+                        <div>
+                            <h3>Filters</h3>
+                            <p>Refine your search</p>
+                        </div>
+
+                        <button type="button" id="clearFilters" class="clear-filters-btn">
+                            Clear All
+                        </button>
+                    </div>
+
+
+                    <div class="filter-group">
+                        <h4>Listing Type</h4>
+
+                        <label class="filter-option">
+                            <input type="checkbox" name="filterListingType" value="sale">
+                            <span>For Sale</span>
+                        </label>
+
+                        <label class="filter-option">
+                            <input type="checkbox" name="filterListingType" value="rent">
+                            <span>For Rent</span>
+                        </label>
+
+                        <label class="filter-option">
+                            <input type="checkbox" name="filterListingType" value="commercial">
+                            <span>Commercial</span>
+                        </label>
+                    </div>
+
+
+                    <div class="filter-divider"></div>
+
+
+                    <div class="filter-group">
+                        <h4>Property Type</h4>
+
+                        <label class="filter-option">
+                            <input type="checkbox" name="filterPropertyType" value="apartment">
+                            <span>Apartment</span>
+                        </label>
+
+                        <label class="filter-option">
+                            <input type="checkbox" name="filterPropertyType" value="house">
+                            <span>Independent House</span>
+                        </label>
+
+                        <label class="filter-option">
+                            <input type="checkbox" name="filterPropertyType" value="villa">
+                            <span>Villa</span>
+                        </label>
+
+                        <label class="filter-option">
+                            <input type="checkbox" name="filterPropertyType" value="plot">
+                            <span>Plot / Land</span>
+                        </label>
+
+                        <label class="filter-option">
+                            <input type="checkbox" name="filterPropertyType" value="office">
+                            <span>Office Space</span>
+                        </label>
+
+                        <label class="filter-option">
+                            <input type="checkbox" name="filterPropertyType" value="shop">
+                            <span>Shop / Showroom</span>
+                        </label>
+                    </div>
+
+
+                    <div class="filter-divider"></div>
+
+
+                    <div class="filter-group">
+                        <h4>Price Range</h4>
+
+                        <div class="price-range-inputs">
+                            <div>
+                                <label for="minPrice">Minimum</label>
+                                <input
+                                    type="number"
+                                    id="minPrice"
+                                    placeholder="Min price"
+                                    min="0"
+                                >
+                            </div>
+
+                            <div>
+                                <label for="maxPrice">Maximum</label>
+                                <input
+                                    type="number"
+                                    id="maxPrice"
+                                    placeholder="Max price"
+                                    min="0"
+                                >
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="filter-divider"></div>
+
+
+                    <div class="filter-group">
+                        <h4>Bedrooms</h4>
+
+                        <div class="bedroom-filter-options">
+                            <label>
+                                <input type="checkbox" name="bedrooms" value="1">
+                                <span>1</span>
+                            </label>
+
+                            <label>
+                                <input type="checkbox" name="bedrooms" value="2">
+                                <span>2</span>
+                            </label>
+
+                            <label>
+                                <input type="checkbox" name="bedrooms" value="3">
+                                <span>3</span>
+                            </label>
+
+                            <label>
+                                <input type="checkbox" name="bedrooms" value="4">
+                                <span>4+</span>
+                            </label>
+                        </div>
+                    </div>
+
+
+                    <div class="filter-divider"></div>
+
+
+                    <div class="filter-group">
+                        <h4>Bathrooms</h4>
+
+                        <select id="filterBathrooms" class="filter-select">
+                            <option value="">Any Bathrooms</option>
+                            <option value="1">1+ Bathroom</option>
+                            <option value="2">2+ Bathrooms</option>
+                            <option value="3">3+ Bathrooms</option>
+                            <option value="4">4+ Bathrooms</option>
+                        </select>
+                    </div>
+
+
+                    <button type="button" id="applyFilters" class="btn btn-primary apply-filters-btn">
+                        Apply Filters
+                    </button>
+
+                </aside>
+
+
+                <!-- Property Results -->
+                <section class="properties-results">
+
+                    <div class="results-toolbar">
+                        <p id="propertyResultsCount" aria-live="polite">
+                            Explore available properties
+                        </p>
+
+                        <button type="button" class="mobile-filter-btn" id="mobileFilterToggle">
+                            <span>☷</span> Filters
+                        </button>
+                    </div>
+
+
+                    <!-- Property cards will be generated by JavaScript -->
+                    <div class="properties-grid" id="propertiesGrid">
+
+                        <div class="properties-loading">
+                            <div class="loader"></div>
+                            <p>Loading properties...</p>
+                        </div>
+
+                    </div>
+
+
+                    <!-- Empty State -->
+                    <div class="empty-state" id="propertiesEmptyState" hidden>
+                        <div class="empty-state-icon">⌕</div>
+                        <h3>No Properties Found</h3>
+                        <p>
+                            We couldn't find any properties matching your filters.
+                            Try changing your search criteria.
+                        </p>
+                        <button type="button" class="btn btn-primary" id="resetPropertySearch">
+                            Reset Search
+                        </button>
+                    </div>
+
+
+                    <!-- Pagination -->
+                    <div class="pagination-container" id="propertiesPagination">
+                        <!-- Pagination buttons generated by JavaScript -->
+                    </div>
+
+                </section>
+
+            </div>
+
+        </div>
+    </main>
+
+
+    <!-- Call To Action -->
+    <section class="properties-cta-section">
+        <div class="container">
+
+            <div class="properties-cta-content">
+                <div>
+                    <span class="section-eyebrow">HAVE A PROPERTY?</span>
+                    <h2>Ready to List Your Property?</h2>
+                    <p>
+                        Reach potential buyers and tenants by listing your property
+                        with EstatePro.
+                    </p>
+                </div>
+
+                <a href="post-property.html" class="btn btn-light">
+                    List Your Property <span>→</span>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+
+            <div class="footer-main">
+
+                <div class="footer-brand">
+                    <a href="index.html" class="logo footer-logo">
+                        <span class="logo-icon">E</span>
+                        <span>Estate<span class="logo-highlight">Pro</span></span>
+                    </a>
+
+                    <p>
+                        Your trusted partner in finding the perfect property.
+                        Discover better places and better possibilities with EstatePro.
+                    </p>
+                </div>
+
+
+                <div class="footer-column">
+                    <h4>Explore</h4>
+                    <a href="properties.html">All Properties</a>
+                    <a href="buy.html">Properties for Sale</a>
+                    <a href="rent.html">Properties for Rent</a>
+                    <a href="commercial.html">Commercial Spaces</a>
+                </div>
+
+
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact Us</a>
+                    <a href="login.html">Login</a>
+                    <a href="register.html">Create Account</a>
+                </div>
+
+
+                <div class="footer-column">
+                    <h4>Get Started</h4>
+                    <a href="post-property.html">Post a Property</a>
+                    <a href="dashboard.html">My Dashboard</a>
+                    <a href="favorites.html">My Favorites</a>
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+                <p>© <span class="current-year"></span> EstatePro. All rights reserved.</p>
+
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/filters.js"></script>
+    <script src="js/properties.js"></script>
+    <script src="js/catalog.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>

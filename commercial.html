@@ -1,0 +1,435 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore premium commercial properties with EstatePro. Find offices, retail shops, showrooms and commercial spaces for sale and rent.">
+    <title>Commercial Properties | EstatePro</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container header-container">
+
+            <a href="index.html" class="logo">
+                <span class="logo-icon">E</span>
+                <span>Estate<span class="logo-highlight">Pro</span></span>
+            </a>
+
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="main-navigation" id="mainNavigation">
+                <a href="index.html">Home</a>
+                <a href="properties.html">Properties</a>
+                <a href="buy.html">Buy</a>
+                <a href="rent.html">Rent</a>
+                <a href="commercial.html" class="active">Commercial</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="login.html" class="btn btn-outline header-login">Login</a>
+                <a href="post-property.html" class="btn btn-primary">Post Property</a>
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="page-hero commercial-hero">
+        <div class="container">
+
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <a href="properties.html">Properties</a>
+                <span>/</span>
+                <span>Commercial</span>
+            </div>
+
+            <div class="page-hero-content">
+                <span class="section-eyebrow">SPACES THAT POWER BUSINESS</span>
+
+                <h1>Find the Right Space to <span>Grow Your Business.</span></h1>
+
+                <p>
+                    Discover premium offices, retail spaces, showrooms and
+                    commercial properties for your next business opportunity.
+                </p>
+
+                <a href="#commercialProperties" class="btn btn-primary">
+                    Explore Commercial Spaces <span>→</span>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Commercial Benefits -->
+    <section class="buy-benefits-section">
+        <div class="container">
+
+            <div class="buy-benefits-grid">
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">▤</div>
+                    <h3>Office Spaces</h3>
+                    <p>Find professional spaces for teams, startups and established businesses.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">▣</div>
+                    <h3>Retail Locations</h3>
+                    <p>Explore shops and showrooms in suitable commercial locations.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">₹</div>
+                    <h3>Investment Options</h3>
+                    <p>Compare commercial property opportunities across different budgets.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">⌖</div>
+                    <h3>Business Locations</h3>
+                    <p>Discover spaces that suit your business requirements and plans.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Commercial Search -->
+    <section class="buy-search-section">
+        <div class="container">
+
+            <div class="buy-search-heading">
+                <span class="section-eyebrow">FIND YOUR BUSINESS SPACE</span>
+                <h2>Search Commercial Properties</h2>
+                <p>Choose your preferred location, property type and budget.</p>
+            </div>
+
+            <form id="commercialSearchForm" class="buy-search-form">
+
+                <div class="search-field">
+                    <label for="commercialLocation">Location</label>
+                    <input
+                        type="text"
+                        id="commercialLocation"
+                        name="location"
+                        placeholder="Enter city or locality"
+                    >
+                </div>
+
+                <div class="search-field">
+                    <label for="commercialPropertyType">Property Type</label>
+                    <select id="commercialPropertyType" name="propertyType">
+                        <option value="">All Commercial Types</option>
+                        <option value="office">Office Space</option>
+                        <option value="shop">Shop / Retail Space</option>
+                        <option value="showroom">Showroom</option>
+                        <option value="warehouse">Warehouse</option>
+                    </select>
+                </div>
+
+                <div class="search-field">
+                    <label for="commercialListingType">Requirement</label>
+                    <select id="commercialListingType" name="listingType">
+                        <option value="">Buy or Rent</option>
+                        <option value="sale">Buy</option>
+                        <option value="rent">Rent</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                    Search Spaces <span>→</span>
+                </button>
+
+            </form>
+
+        </div>
+    </section>
+
+
+    <!-- Commercial Categories -->
+    <section class="buy-categories-section">
+        <div class="container">
+
+            <div class="section-heading">
+                <div>
+                    <span class="section-eyebrow">EXPLORE COMMERCIAL SPACES</span>
+                    <h2>Spaces for Every Business</h2>
+                    <p>Find a commercial property that supports your business goals.</p>
+                </div>
+            </div>
+
+
+            <div class="buy-categories-grid">
+
+                <a href="properties.html?type=office" class="buy-category-card">
+                    <div class="buy-category-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=700&q=85"
+                            alt="Modern office workspace"
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <div class="buy-category-info">
+                        <h3>Office Spaces</h3>
+                        <span>Explore Offices →</span>
+                    </div>
+                </a>
+
+
+                <a href="properties.html?type=shop" class="buy-category-card">
+                    <div class="buy-category-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1604719312566-8912e9c8a213?auto=format&fit=crop&w=700&q=85"
+                            alt="Retail commercial shop"
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <div class="buy-category-info">
+                        <h3>Retail Shops</h3>
+                        <span>Explore Shops →</span>
+                    </div>
+                </a>
+
+
+                <a href="properties.html?type=showroom" class="buy-category-card">
+                    <div class="buy-category-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=700&q=85"
+                            alt="Commercial showroom"
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <div class="buy-category-info">
+                        <h3>Showrooms</h3>
+                        <span>Explore Showrooms →</span>
+                    </div>
+                </a>
+
+
+                <a href="properties.html?type=warehouse" class="buy-category-card">
+                    <div class="buy-category-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=700&q=85"
+                            alt="Commercial warehouse"
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <div class="buy-category-info">
+                        <h3>Warehouses</h3>
+                        <span>Explore Warehouses →</span>
+                    </div>
+                </a>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Commercial Properties -->
+    <section class="buy-properties-section" id="commercialProperties">
+        <div class="container">
+
+            <div class="section-heading properties-heading-row">
+                <div>
+                    <span class="section-eyebrow">FEATURED BUSINESS SPACES</span>
+                    <h2>Available Commercial Properties</h2>
+                    <p>Explore commercial spaces for your business or investment.</p>
+                </div>
+
+                <a href="properties.html?type=office" class="text-link">
+                    View All Spaces <span>→</span>
+                </a>
+            </div>
+
+
+            <div class="buy-properties-grid" id="commercialPropertiesGrid">
+
+                <div class="properties-loading">
+                    <div class="loader"></div>
+                    <p>Loading commercial properties...</p>
+                </div>
+
+            </div>
+
+
+            <div class="empty-state" id="commercialEmptyState" hidden>
+                <div class="empty-state-icon">▤</div>
+                <h3>No Commercial Properties Available</h3>
+                <p>There are currently no commercial properties matching your search.</p>
+                <a href="properties.html" class="btn btn-primary">
+                    Browse All Properties
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Commercial Process -->
+    <section class="buy-process-section">
+        <div class="container">
+
+            <div class="buy-process-heading">
+                <span class="section-eyebrow">YOUR BUSINESS JOURNEY</span>
+                <h2>Find Your Next Business Location</h2>
+                <p>Follow these simple steps to discover your ideal commercial space.</p>
+            </div>
+
+
+            <div class="buy-process-grid">
+
+                <div class="buy-process-card">
+                    <span class="process-number">01</span>
+                    <div class="process-icon">⌕</div>
+                    <h3>Explore Spaces</h3>
+                    <p>Search offices, shops and other commercial properties.</p>
+                </div>
+
+                <div class="buy-process-card">
+                    <span class="process-number">02</span>
+                    <div class="process-icon">♡</div>
+                    <h3>Compare Options</h3>
+                    <p>Shortlist spaces based on location, size and budget.</p>
+                </div>
+
+                <div class="buy-process-card">
+                    <span class="process-number">03</span>
+                    <div class="process-icon">☎</div>
+                    <h3>Contact the Owner</h3>
+                    <p>Discuss pricing, availability and property details.</p>
+                </div>
+
+                <div class="buy-process-card">
+                    <span class="process-number">04</span>
+                    <div class="process-icon">▤</div>
+                    <h3>Choose Your Space</h3>
+                    <p>Select the right location for your business requirements.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- CTA -->
+    <section class="properties-cta-section">
+        <div class="container">
+
+            <div class="properties-cta-content">
+                <div>
+                    <span class="section-eyebrow">COMMERCIAL PROPERTY OWNERS</span>
+                    <h2>List Your Commercial Property</h2>
+                    <p>
+                        Connect with businesses and investors searching for
+                        commercial spaces through EstatePro.
+                    </p>
+                </div>
+
+                <a href="post-property.html" class="btn btn-light">
+                    Post a Property <span>→</span>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+
+            <div class="footer-main">
+
+                <div class="footer-brand">
+                    <a href="index.html" class="logo footer-logo">
+                        <span class="logo-icon">E</span>
+                        <span>Estate<span class="logo-highlight">Pro</span></span>
+                    </a>
+
+                    <p>
+                        Your trusted partner in finding the perfect property.
+                        Discover better places and better possibilities with EstatePro.
+                    </p>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Explore</h4>
+                    <a href="properties.html">All Properties</a>
+                    <a href="buy.html">Properties for Sale</a>
+                    <a href="rent.html">Properties for Rent</a>
+                    <a href="commercial.html">Commercial Spaces</a>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact Us</a>
+                    <a href="login.html">Login</a>
+                    <a href="register.html">Create Account</a>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Get Started</h4>
+                    <a href="post-property.html">Post a Property</a>
+                    <a href="dashboard.html">My Dashboard</a>
+                    <a href="favorites.html">My Favorites</a>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>© <span class="current-year"></span> EstatePro. All rights reserved.</p>
+
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="js/data.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/properties.js"></script>
+    <script src="js/filters.js"></script>
+    <script src="js/catalog.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>

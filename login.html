@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Login to your EstatePro account to manage properties, favorites and enquiries.">
+    <title>Login | EstatePro</title>
+
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+<body class="auth-page">
+
+    <header class="site-header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">E</span>
+                <span>Estate<span class="logo-highlight">Pro</span></span>
+            </a>
+
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+
+            <nav class="main-navigation" id="mainNavigation">
+                <a href="index.html">Home</a>
+                <a href="properties.html">Properties</a>
+                <a href="buy.html">Buy</a>
+                <a href="rent.html">Rent</a>
+                <a href="commercial.html">Commercial</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="register.html" class="btn btn-primary">Create Account</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="auth-main">
+        <section class="auth-section">
+            <div class="auth-container">
+
+                <div class="auth-visual">
+                    <div class="auth-visual-overlay"></div>
+
+                    <div class="auth-visual-content">
+                        <span class="auth-eyebrow">WELCOME TO ESTATEPRO</span>
+
+                        <h1>Your next chapter starts with the right property.</h1>
+
+                        <p>
+                            Discover exceptional properties, save your favorites
+                            and manage your real estate journey in one place.
+                        </p>
+
+                        <div class="auth-visual-stats">
+                            <div>
+                                <strong>1,200+</strong>
+                                <span>Properties</span>
+                            </div>
+                            <div>
+                                <strong>850+</strong>
+                                <span>Happy Clients</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="auth-form-panel">
+                    <div class="auth-form-wrapper">
+
+                        <div class="auth-heading">
+                            <span class="auth-small-heading">YOUR ACCOUNT</span>
+                            <h2>Welcome Back</h2>
+                            <p>Sign in to continue your property journey.</p>
+                        </div>
+
+                        <div id="loginFormMessage" class="auth-message" role="alert"></div>
+
+                        <form id="loginForm" novalidate>
+
+                            <div class="form-group">
+                                <label for="loginEmail">Email Address</label>
+
+                                <input
+                                    type="email"
+                                    id="loginEmail"
+                                    name="email"
+                                    placeholder="Enter your email address"
+                                    autocomplete="email"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="loginPassword">Password</label>
+
+                                <div class="password-input-wrapper">
+                                    <input
+                                        type="password"
+                                        id="loginPassword"
+                                        name="password"
+                                        placeholder="Enter your password"
+                                        autocomplete="current-password"
+                                        required
+                                    >
+
+                                    <button
+                                        type="button"
+                                        class="password-toggle"
+                                        data-password-toggle="loginPassword"
+                                        aria-label="Show password"
+                                    >
+                                        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8">
+                                            <path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"/>
+                                            <circle cx="12" cy="12" r="3"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="auth-form-options">
+                                <label class="auth-checkbox">
+                                    <input type="checkbox" id="rememberMe" name="rememberMe">
+                                    <span>Remember me</span>
+                                </label>
+
+                                <a href="forgot-password.html" class="auth-link">
+                                    Forgot password?
+                                </a>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary auth-submit-btn" id="loginSubmitBtn">
+                                Sign In
+                                <span aria-hidden="true">→</span>
+                            </button>
+
+                        </form>
+
+                        <div class="auth-divider">
+                            <span>OR</span>
+                        </div>
+
+                        <p class="auth-switch-text">
+                            Don't have an account?
+                            <a href="register.html">Create an account</a>
+                        </p>
+
+                        <p class="auth-back-home">
+                            <a href="index.html">← Back to homepage</a>
+                        </p>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-bottom">
+            <p>© <span class="current-year"></span> EstatePro. All rights reserved.</p>
+            <p>Find your place. Build your future.</p>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>

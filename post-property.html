@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#142D4E">
+  <title>List your property | EstatePro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-container">
+      <a class="brand" href="index.html"><span class="brand-mark">E</span><span>Estate<span class="brand-accent">Pro</span></span></a>
+      <button class="mobile-menu-btn" id="mobileMenuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+      <nav class="main-navigation" id="mainNavigation">
+        <a class="nav-link" href="index.html">Home</a><a class="nav-link" href="properties.html">Explore</a>
+        <a class="nav-link" href="buy.html">Buy</a><a class="nav-link" href="rent.html">Rent</a>
+        <a class="nav-link" href="commercial.html">Commercial</a><a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="contact.html">Contact</a>
+        <a class="btn btn-primary nav-cta" href="post-property.html">List Property</a>
+        <a class="nav-link" href="login.html" id="navAccountLink">Sign in</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+<section class="page-hero compact"><div class="container"><p class="eyebrow">REACH THE RIGHT PEOPLE</p><h1>List your property</h1><p>Share accurate details so buyers and tenants can discover your listing.</p></div></section>
+<section class="section"><div class="container narrow"><form class="form-card" id="propertyForm">
+  <h2>Property details</h2><div class="form-grid">
+    <label class="form-group full-span">Property title<input name="title" required maxlength="90" placeholder="e.g. Spacious 3 BHK apartment"></label>
+    <label class="form-group">Listing purpose<select name="listingType" required><option value="buy">For sale</option><option value="rent">For rent</option></select></label>
+    <label class="form-group">Property type<select name="type" required><option value="apartment">Apartment</option><option value="villa">Villa</option><option value="independent-house">Independent house</option><option value="plot">Residential plot</option><option value="commercial">Commercial space</option><option value="office">Office space</option></select></label>
+    <label class="form-group">Price (₹)<input name="price" type="number" min="1" required></label>
+    <label class="form-group">Area (sq.ft.)<input name="area" type="number" min="1" required></label>
+    <label class="form-group">Bedrooms<input name="bedrooms" type="number" min="0" value="2"></label>
+    <label class="form-group">Bathrooms<input name="bathrooms" type="number" min="0" value="2"></label>
+    <label class="form-group">City<input name="city" required></label>
+    <label class="form-group">State<input name="state" required></label>
+    <label class="form-group">Locality<input name="locality" required></label>
+    <label class="form-group">Pincode<input name="pincode" inputmode="numeric" pattern="[0-9]{6}" required></label>
+    <label class="form-group full-span">Full address<input name="address" required></label>
+    <label class="form-group full-span">Description<textarea name="description" rows="5" required minlength="30"></textarea></label>
+    <label class="form-group full-span">Cover image URL (optional)<input name="coverImage" type="url" placeholder="https://..."></label>
+    <label class="form-group full-span">Furnishing<select name="furnishing"><option>Unfurnished</option><option>Semi-Furnished</option><option>Fully-Furnished</option><option>Not Applicable</option></select></label>
+  </div>
+  <p class="notice">Listings submitted in this demo are saved in this browser and marked pending review. This is not a live publishing service.</p>
+  <button class="btn btn-primary" type="submit">Submit property</button><p id="propertyFeedback" class="form-feedback" role="status"></p>
+</form></div></section>
+</main>
+  <footer class="site-footer"><div class="container footer-grid">
+    <div><a class="brand footer-brand" href="index.html"><span class="brand-mark">E</span><span>Estate<span class="brand-accent">Pro</span></span></a>
+    <p>Find a place you'll love to call home.</p></div>
+    <div><h3>Explore</h3><a href="buy.html">Buy property</a><a href="rent.html">Rent property</a><a href="commercial.html">Commercial</a></div>
+    <div><h3>Company</h3><a href="about.html">About us</a><a href="contact.html">Contact</a></div>
+    <div><h3>Account</h3><a href="login.html">Sign in</a><a href="register.html">Create account</a></div>
+  </div><div class="container footer-bottom">© <span data-year></span> EstatePro. Frontend demonstration.</div></footer>
+  <div id="toastContainer" class="toast-container" aria-live="polite"></div>
+  <script src="js/data.js"></script><script src="js/storage.js"></script><script src="js/utils.js"></script>
+  <script src="js/properties.js"></script><script src="js/main.js"></script>
+</body></html>

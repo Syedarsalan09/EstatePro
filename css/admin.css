@@ -1,0 +1,92 @@
+.admin-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.admin-actions button {
+    min-height: 34px;
+    padding: 7px 11px;
+    color: var(--primary);
+    background: #fff;
+    border: 1px solid var(--border-dark);
+    border-radius: 7px;
+    font-size: 12px;
+    font-weight: 700;
+    transition: background var(--transition), border-color var(--transition);
+}
+
+.admin-actions button:hover {
+    background: #f3f6f9;
+    border-color: var(--primary-light);
+}
+
+.status-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 10px;
+    color: #805b13;
+    background: #fff4d9;
+    border-radius: 99px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+
+.status-pill.approved {
+    color: #24734a;
+    background: #e7f6ed;
+}
+
+.status-pill.rejected {
+    color: #a12626;
+    background: #fdecec;
+}
+
+.warning-notice {
+    margin-bottom: 24px;
+    padding: 15px 18px;
+    color: #795b1b;
+    background: #fff8e8;
+    border: 1px solid #f1dca9;
+    border-radius: 10px;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+#adminLoginPanel {
+    max-width: 480px;
+    margin: 32px auto;
+}
+
+#adminLoginPanel form > .btn {
+    min-width: 130px;
+}
+
+#adminPanel > h2 {
+    margin: 34px 0 14px;
+    color: var(--primary);
+    font-size: 20px;
+}
+
+#adminPanel .table-wrap {
+    margin-bottom: 26px;
+}
+
+#adminPanel .data-table td {
+    vertical-align: middle;
+}
+
+#adminPanel .data-table td:last-child {
+    white-space: normal;
+}
+
+@media (max-width: 620px) {
+    #adminPanel .dashboard-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .admin-actions {
+        flex-wrap: wrap;
+    }
+}

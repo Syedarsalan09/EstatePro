@@ -1,0 +1,1047 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="EstatePro - Discover premium properties for sale and rent across India. Find your perfect home, apartment, or commercial property.">
+
+    <meta name="keywords" content="real estate India, buy property, rent property, houses, apartments, commercial property">
+
+    <meta name="author" content="EstatePro">
+
+    <meta name="theme-color" content="#142D4E">
+
+    <title>EstatePro | Find Your Perfect Property</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- JavaScript Files -->
+    <script src="js/data.js" defer></script>
+    <script src="js/storage.js" defer></script>
+    <script src="js/utils.js" defer></script>
+    <script src="js/catalog.js" defer></script>
+    <script src="js/main.js" defer></script>
+</head>
+
+<body>
+
+    <!-- =====================================
+         ANNOUNCEMENT BAR
+    ====================================== -->
+
+    <div class="announcement-bar">
+        <p>
+            Find your dream property with EstatePro.
+            <a href="properties.html">Explore Properties →</a>
+        </p>
+
+        <button class="announcement-close" id="closeAnnouncement"
+            aria-label="Close announcement">
+            ×
+        </button>
+    </div>
+
+
+    <!-- =====================================
+         HEADER / NAVIGATION
+    ====================================== -->
+
+    <header class="site-header" id="siteHeader">
+
+        <div class="container header-container">
+
+            <!-- Logo -->
+
+            <a href="index.html" class="logo">
+                <span class="logo-icon">E</span>
+
+                <span class="logo-text">
+                    Estate<span>Pro</span>
+                    <small>REAL ESTATE</small>
+                </span>
+            </a>
+
+
+            <!-- Desktop Navigation -->
+
+            <nav class="main-navigation" id="mainNavigation">
+
+                <a href="index.html" class="nav-link active">Home</a>
+
+                <a href="properties.html" class="nav-link">Properties</a>
+
+                <a href="buy.html" class="nav-link">Buy</a>
+
+                <a href="rent.html" class="nav-link">Rent</a>
+
+                <a href="commercial.html" class="nav-link">Commercial</a>
+
+                <a href="about.html" class="nav-link">About Us</a>
+
+                <a href="contact.html" class="nav-link">Contact</a>
+
+            </nav>
+
+
+            <!-- Header Actions -->
+
+            <div class="header-actions">
+
+                <a href="login.html" class="header-login" id="headerLogin">
+                    Login
+                </a>
+
+                <a href="post-property.html" class="btn btn-primary header-post-btn">
+                    + Post Property
+                </a>
+
+            </div>
+
+
+            <!-- Mobile Menu Button -->
+
+            <button class="mobile-menu-btn"
+                id="mobileMenuBtn"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="mainNavigation">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================
+         HERO SECTION
+    ====================================== -->
+
+    <main>
+
+        <section class="hero-section">
+
+            <div class="hero-overlay"></div>
+
+            <div class="container hero-container">
+
+                <div class="hero-content">
+
+                    <span class="hero-tag">
+                        YOUR PROPERTY JOURNEY STARTS HERE
+                    </span>
+
+                    <h1>
+                        Find a Place Where
+                        <span>Life Happens.</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        Discover exceptional homes, apartments and commercial
+                        spaces across India. Your perfect property is just
+                        a search away.
+                    </p>
+
+
+                    <!-- Property Search -->
+
+                    <div class="property-search">
+
+                        <!-- Search Tabs -->
+
+                        <div class="search-tabs" id="searchTabs">
+
+                            <button class="search-tab active"
+                                data-type="buy">
+                                Buy
+                            </button>
+
+                            <button class="search-tab"
+                                data-type="rent">
+                                Rent
+                            </button>
+
+                            <button class="search-tab"
+                                data-type="commercial">
+                                Commercial
+                            </button>
+
+                        </div>
+
+
+                        <!-- Search Form -->
+
+                        <form id="heroSearchForm" class="search-form">
+
+                            <div class="search-field location-field">
+
+                                <label for="heroLocation">
+                                    Location
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="heroLocation"
+                                    name="location"
+                                    placeholder="Enter city, area or locality"
+                                    autocomplete="off"
+                                >
+
+                            </div>
+
+
+                            <div class="search-field">
+
+                                <label for="heroPropertyType">
+                                    Property Type
+                                </label>
+
+                                <select id="heroPropertyType"
+                                    name="propertyType">
+
+                                    <option value="">All Types</option>
+                                    <option value="apartment">Apartment</option>
+                                    <option value="house">Independent House</option>
+                                    <option value="villa">Villa</option>
+                                    <option value="plot">Residential Plot</option>
+                                    <option value="office">Office Space</option>
+                                    <option value="shop">Shop</option>
+
+                                </select>
+
+                            </div>
+
+
+                            <div class="search-field">
+
+                                <label for="heroBudget">
+                                    Budget
+                                </label>
+
+                                <select id="heroBudget" name="budget">
+
+                                    <option value="">Any Budget</option>
+                                    <option value="2500000">Under ₹25 Lakh</option>
+                                    <option value="5000000">Under ₹50 Lakh</option>
+                                    <option value="10000000">Under ₹1 Crore</option>
+                                    <option value="20000000">Under ₹2 Crore</option>
+                                    <option value="50000000">Under ₹5 Crore</option>
+
+                                </select>
+
+                            </div>
+
+
+                            <button type="submit"
+                                class="btn btn-search">
+
+                                <span>⌕</span>
+                                Search Properties
+
+                            </button>
+
+                        </form>
+
+                    </div>
+
+
+                    <!-- Hero Trust Information -->
+
+                    <div class="hero-trust">
+
+                        <div class="trust-item">
+                            <span class="trust-icon">✓</span>
+                            <span>Verified Listing Demo</span>
+                        </div>
+
+                        <div class="trust-item">
+                            <span class="trust-icon">✓</span>
+                            <span>Easy Property Search</span>
+                        </div>
+
+                        <div class="trust-item">
+                            <span class="trust-icon">✓</span>
+                            <span>Trusted Experience</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             STATISTICS SECTION
+        ====================================== -->
+
+        <section class="statistics-section">
+
+            <div class="container statistics-grid">
+
+                <div class="statistic-card">
+                    <h2 data-counter="1200">0</h2>
+                    <p>Property Listings</p>
+                </div>
+
+                <div class="statistic-card">
+                    <h2 data-counter="850">0</h2>
+                    <p>Happy Customers</p>
+                </div>
+
+                <div class="statistic-card">
+                    <h2 data-counter="25">0</h2>
+                    <p>Popular Locations</p>
+                </div>
+
+                <div class="statistic-card">
+                    <h2 data-counter="150">0</h2>
+                    <p>Property Agents</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             FEATURED PROPERTIES
+        ====================================== -->
+
+        <section class="section featured-section">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="section-eyebrow">
+                            HANDPICKED FOR YOU
+                        </span>
+
+                        <h2>Featured Properties</h2>
+
+                        <p>
+                            Explore some of our most attractive
+                            properties available right now.
+                        </p>
+
+                    </div>
+
+                    <a href="properties.html" class="text-link">
+                        View All Properties →
+                    </a>
+
+                </div>
+
+
+                <!-- Properties populated through JavaScript -->
+
+                <div class="property-grid" id="featuredProperties">
+
+                    <div class="loading-state">
+                        <div class="loader"></div>
+                        <p>Loading featured properties...</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             PROPERTY CATEGORIES
+        ====================================== -->
+
+        <section class="section categories-section">
+
+            <div class="container">
+
+                <div class="section-heading centered">
+
+                    <span class="section-eyebrow">
+                        EXPLORE YOUR OPTIONS
+                    </span>
+
+                    <h2>Find Properties By Category</h2>
+
+                    <p>
+                        Whatever your property requirements,
+                        we have options to explore.
+                    </p>
+
+                </div>
+
+
+                <div class="category-grid">
+
+                    <a href="properties.html?type=apartment"
+                        class="category-card">
+
+                        <div class="category-icon">⌂</div>
+
+                        <h3>Apartments</h3>
+
+                        <p>Modern flats and apartments</p>
+
+                        <span>Explore Properties →</span>
+
+                    </a>
+
+
+                    <a href="properties.html?type=house"
+                        class="category-card">
+
+                        <div class="category-icon">⌂</div>
+
+                        <h3>Independent Houses</h3>
+
+                        <p>Comfortable family homes</p>
+
+                        <span>Explore Properties →</span>
+
+                    </a>
+
+
+                    <a href="properties.html?type=villa"
+                        class="category-card">
+
+                        <div class="category-icon">◇</div>
+
+                        <h3>Luxury Villas</h3>
+
+                        <p>Premium lifestyle properties</p>
+
+                        <span>Explore Properties →</span>
+
+                    </a>
+
+
+                    <a href="properties.html?type=plot"
+                        class="category-card">
+
+                        <div class="category-icon">▦</div>
+
+                        <h3>Residential Plots</h3>
+
+                        <p>Land for your future home</p>
+
+                        <span>Explore Properties →</span>
+
+                    </a>
+
+
+                    <a href="properties.html?type=office"
+                        class="category-card">
+
+                        <div class="category-icon">▤</div>
+
+                        <h3>Office Spaces</h3>
+
+                        <p>Professional business spaces</p>
+
+                        <span>Explore Properties →</span>
+
+                    </a>
+
+
+                    <a href="properties.html?type=shop"
+                        class="category-card">
+
+                        <div class="category-icon">⌑</div>
+
+                        <h3>Shops & Retail</h3>
+
+                        <p>Commercial retail properties</p>
+
+                        <span>Explore Properties →</span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             POPULAR LOCATIONS
+        ====================================== -->
+
+        <section class="section locations-section">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="section-eyebrow">
+                            EXPLORE LOCATIONS
+                        </span>
+
+                        <h2>Popular Cities in India</h2>
+
+                        <p>
+                            Discover properties in India's
+                            most popular real estate destinations.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="locations-grid">
+
+                    <a href="properties.html?location=varanasi"
+                        class="location-card location-varanasi">
+
+                        <div class="location-content">
+                            <h3>Varanasi</h3>
+                            <p>Explore Properties →</p>
+                        </div>
+
+                    </a>
+
+
+                    <a href="properties.html?location=delhi"
+                        class="location-card location-delhi">
+
+                        <div class="location-content">
+                            <h3>New Delhi</h3>
+                            <p>Explore Properties →</p>
+                        </div>
+
+                    </a>
+
+
+                    <a href="properties.html?location=mumbai"
+                        class="location-card location-mumbai">
+
+                        <div class="location-content">
+                            <h3>Mumbai</h3>
+                            <p>Explore Properties →</p>
+                        </div>
+
+                    </a>
+
+
+                    <a href="properties.html?location=bangalore"
+                        class="location-card location-bangalore">
+
+                        <div class="location-content">
+                            <h3>Bangalore</h3>
+                            <p>Explore Properties →</p>
+                        </div>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             WHY CHOOSE US
+        ====================================== -->
+
+        <section class="section why-section">
+
+            <div class="container why-container">
+
+                <div class="why-content">
+
+                    <span class="section-eyebrow">
+                        WHY ESTATEPRO
+                    </span>
+
+                    <h2>
+                        Making Property Decisions
+                        <span>Simple and Smarter.</span>
+                    </h2>
+
+                    <p>
+                        Finding the right property is an important
+                        decision. We aim to make your property
+                        discovery experience easier and more convenient.
+                    </p>
+
+
+                    <div class="benefit-list">
+
+                        <div class="benefit-item">
+
+                            <div class="benefit-icon">✓</div>
+
+                            <div>
+                                <h3>Detailed Property Information</h3>
+                                <p>
+                                    Explore property descriptions,
+                                    specifications and images.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="benefit-item">
+
+                            <div class="benefit-icon">⌕</div>
+
+                            <div>
+                                <h3>Smart Property Search</h3>
+                                <p>
+                                    Find properties based on your
+                                    preferred budget and location.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="benefit-item">
+
+                            <div class="benefit-icon">♡</div>
+
+                            <div>
+                                <h3>Save Your Favourite Properties</h3>
+                                <p>
+                                    Keep track of properties
+                                    you are interested in.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <a href="about.html" class="btn btn-primary">
+                        Learn More About Us →
+                    </a>
+
+                </div>
+
+
+                <div class="why-image-wrapper">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=85"
+                        alt="Modern luxury residential property"
+                        loading="lazy"
+                    >
+
+                    <div class="why-image-label">
+                        <strong>Find Your Dream Home</strong>
+                        <span>Start your property journey today.</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             RECENT PROPERTIES
+        ====================================== -->
+
+        <section class="section recent-section">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div>
+
+                        <span class="section-eyebrow">
+                            NEW ON ESTATEPRO
+                        </span>
+
+                        <h2>Recently Added Properties</h2>
+
+                        <p>
+                            Discover the latest property listings
+                            added to our marketplace.
+                        </p>
+
+                    </div>
+
+                    <a href="properties.html" class="text-link">
+                        Explore All →
+                    </a>
+
+                </div>
+
+
+                <div class="property-grid" id="recentProperties">
+
+                    <div class="loading-state">
+                        <div class="loader"></div>
+                        <p>Loading recent properties...</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             CALL TO ACTION
+        ====================================== -->
+
+        <section class="cta-section">
+
+            <div class="container cta-container">
+
+                <div>
+
+                    <span class="section-eyebrow">
+                        SELL OR RENT YOUR PROPERTY
+                    </span>
+
+                    <h2>
+                        Have a Property to Sell or Rent?
+                    </h2>
+
+                    <p>
+                        Reach potential buyers and tenants.
+                        List your property on EstatePro.
+                    </p>
+
+                </div>
+
+                <a href="post-property.html"
+                    class="btn btn-light">
+
+                    Post Your Property →
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             TESTIMONIALS
+        ====================================== -->
+
+        <section class="section testimonials-section">
+
+            <div class="container">
+
+                <div class="section-heading centered">
+
+                    <span class="section-eyebrow">
+                        CUSTOMER EXPERIENCES
+                    </span>
+
+                    <h2>What People Say About Us</h2>
+
+                    <p>
+                        Discover what our customers think
+                        about their property search experience.
+                    </p>
+
+                </div>
+
+
+                <div class="testimonial-grid">
+
+                    <article class="testimonial-card">
+
+                        <div class="testimonial-rating">
+                            ★★★★★
+                        </div>
+
+                        <p>
+                            "The website made it easy to explore
+                            different properties and compare
+                            available options."
+                        </p>
+
+                        <div class="testimonial-user">
+                            <div class="user-avatar">RK</div>
+
+                            <div>
+                                <h4>Rahul Kumar</h4>
+                                <span>Property Buyer</span>
+                            </div>
+                        </div>
+
+                    </article>
+
+
+                    <article class="testimonial-card">
+
+                        <div class="testimonial-rating">
+                            ★★★★★
+                        </div>
+
+                        <p>
+                            "The property information and
+                            search experience were simple
+                            and convenient."
+                        </p>
+
+                        <div class="testimonial-user">
+                            <div class="user-avatar">AS</div>
+
+                            <div>
+                                <h4>Aditya Sharma</h4>
+                                <span>Property Seeker</span>
+                            </div>
+                        </div>
+
+                    </article>
+
+
+                    <article class="testimonial-card">
+
+                        <div class="testimonial-rating">
+                            ★★★★★
+                        </div>
+
+                        <p>
+                            "A clean and professional way
+                            to explore properties and
+                            discover new opportunities."
+                        </p>
+
+                        <div class="testimonial-user">
+                            <div class="user-avatar">PN</div>
+
+                            <div>
+                                <h4>Priya Nagar</h4>
+                                <span>Property Investor</span>
+                            </div>
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
+             NEWSLETTER
+        ====================================== -->
+
+        <section class="newsletter-section">
+
+            <div class="container newsletter-container">
+
+                <div>
+
+                    <h2>Stay Updated With EstatePro</h2>
+
+                    <p>
+                        Get property updates and real estate
+                        insights directly in your inbox.
+                    </p>
+
+                </div>
+
+
+                <form id="newsletterForm" class="newsletter-form">
+
+                    <input
+                        type="email"
+                        id="newsletterEmail"
+                        placeholder="Enter your email address"
+                        required
+                    >
+
+                    <button type="submit" class="btn btn-primary">
+                        Subscribe
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================
+         FOOTER
+    ====================================== -->
+
+    <footer class="site-footer">
+
+        <div class="container footer-grid">
+
+
+            <!-- Company Information -->
+
+            <div class="footer-about">
+
+                <a href="index.html" class="logo footer-logo">
+
+                    <span class="logo-icon">E</span>
+
+                    <span class="logo-text">
+                        Estate<span>Pro</span>
+                        <small>REAL ESTATE</small>
+                    </span>
+
+                </a>
+
+                <p>
+                    Discover residential and commercial
+                    properties across India with EstatePro.
+                    Find your next property opportunity.
+                </p>
+
+                <div class="footer-socials">
+
+                    <a href="#" aria-label="Facebook">f</a>
+                    <a href="#" aria-label="Instagram">◎</a>
+                    <a href="#" aria-label="LinkedIn">in</a>
+                    <a href="#" aria-label="Twitter">𝕏</a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Quick Links -->
+
+            <div class="footer-column">
+
+                <h3>Quick Links</h3>
+
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="properties.html">All Properties</a>
+                <a href="contact.html">Contact Us</a>
+
+            </div>
+
+
+            <!-- Property Links -->
+
+            <div class="footer-column">
+
+                <h3>Properties</h3>
+
+                <a href="buy.html">Buy Property</a>
+                <a href="rent.html">Rent Property</a>
+                <a href="commercial.html">Commercial</a>
+                <a href="post-property.html">Post Property</a>
+
+            </div>
+
+
+            <!-- Account Links -->
+
+            <div class="footer-column">
+
+                <h3>My Account</h3>
+
+                <a href="login.html">Login</a>
+                <a href="register.html">Register</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="favorites.html">My Favorites</a>
+
+            </div>
+
+
+            <!-- Contact Information -->
+
+            <div class="footer-column footer-contact">
+
+                <h3>Contact Information</h3>
+
+                <p>India</p>
+                <a href="mailto:info@estatepro.example">
+                    info@estatepro.example
+                </a>
+                <a href="tel:+910000000000">
+                    +91 00000 00000
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <div class="container footer-bottom-content">
+
+                <p>
+                    © <span id="currentYear">2026</span>
+                    EstatePro. All rights reserved.
+                </p>
+
+                <div>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms & Conditions</a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =====================================
+         GLOBAL NOTIFICATION CONTAINER
+    ====================================== -->
+
+    <div id="toastContainer"
+        class="toast-container"
+        aria-live="polite"
+        aria-atomic="true">
+    </div>
+
+
+    <!-- =====================================
+         BACK TO TOP BUTTON
+    ====================================== -->
+
+    <button
+        id="backToTop"
+        class="back-to-top"
+        aria-label="Back to top">
+
+        ↑
+
+    </button>
+
+</body>
+</html>
